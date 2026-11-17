@@ -1,0 +1,344 @@
+/* FORMA WEBSITE GLOBAL STYLES*/
+
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Manrope:wght@400;500;600;700&display=swap');
+
+/* 1. Variables */
+
+:root {
+    /* Brand Colors*/
+    --primary: #3971B8;
+    --primary-dark: #28558F; /* darker blue for hover*/
+
+    /* Text Colors */
+    --text: #252724;
+    --muted: #595959;
+
+    /* Background Colors */
+    --background: #f7f6f0;
+    --surface: #FFFFFF;
+    --border: #F07850;
+    /* Accent Colors */
+    --luntian: #427033;
+    --sinag: #f4d66e;
+    --dapithapon: #f07850;
+
+    /* Feedback and border colors */
+    --error: #B42318;
+    --button-hover: #d85d3c;
+
+    /* General */
+    --radius: 0.5rem;
+}
+
+/* 2. Reset and Base*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--background);
+}
+
+h1, h2, h3 {
+    font-family: "Bagel Fat One", sans-serif;
+    line-height: 1.25;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.375rem;}
+
+p { margin: 0 0 1rem; }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--primary)
+}
+a:hover {
+    color: var(--primary-dark)
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+nav a:focus-visible {
+  outline-color: #FFFFFF;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: var(--primary);
+    color: #ffffff;
+}
+
+/* FORMA Logo */
+
+nav > a img {
+    display: block;
+    max-height: 55px;
+    width: auto;
+}
+
+/* there's no site name in the html
+.site-name {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+*/
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-list a {
+    display: inline-block;
+    padding: 0.5rem 0;
+    color: #f7f6f0;
+}
+
+.nav-list a[aria-current="page"] {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.icon-nav {
+    gap: 1rem;
+}
+
+.icon-nav input {
+    width: 100%;
+    max-width: 180px;
+    padding: 0.5rem 0.75rem;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--background);
+    color: var(--text);
+}
+
+.icon-nav img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+main {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem;
+}
+
+.intro {
+    color: var(--primary)
+}
+
+.page-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+/* Contact Details */
+
+.contact-details {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.contact-details h2 {
+    color: var(--primary);
+}
+
+.contact-details h3 {
+    margin-bottom: 0.25rem;
+}
+
+
+/* Contact Form */
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+.required {
+    font-weight: normal;
+    color: var(--muted)
+}
+
+.hint {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--muted)
+}
+
+/* Form Elements */
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font: inherit;
+    color: var(--text);
+    background: var(--background);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+    border-color: var(--error);
+}
+
+/* Button */
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font: inherit;
+    font-weight: bold;
+    color: #f7f6f0;
+    background: var(--dapithapon);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.button:hover {
+    background: var(--button-hover);
+    border-color: var(--button-hover);
+}
+
+/* Map */
+
+.map {
+    margin-top: 2rem;
+}
+
+.map iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border: 0;
+    border-radius: var(--radius);
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1.25rem;
+    background: var(--surface);
+    color: var(--text);
+    border-radius: var(--radius);
+}
+
+address {
+    font-style: normal;
+}
+
+/* Footer */
+
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    background: var(--surface);
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.footer-links,
+.footer-terms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links a,
+.footer-terms a {
+    display: inline-block;
+    padding: 0.5rem 0;
+}
+
+@media (min-width: 48em) {
+
+  .site-header {
+    flex-direction: row;
+    justify-content: space-between;  
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  .page-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .contact-form {
+    flex: 2;                        
+  }
+
+  .contact-details {
+    flex: 1;                        
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
