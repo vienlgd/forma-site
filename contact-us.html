@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- correct rendering of text -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- display in mobile device -->
+    <title>Forma</title>
+    <link rel="stylesheet" href="forma-style.css">
+    <meta name="description" content="Forma Sample Store"> <!-- makikita sa search engine / SEO -->
+</head>
+
+<body>
+
+    <main>
+
+        <!--contact details section-->
+        <div class="contact-details">
+            <h2>Contact Us!</h2>
+            <p>Do you have any questions? We'd love to hear from you.<br>Below is our contact details.</p>
+            <h3>Phone</h3>
+            <p>0912 235 6789 or (49) 123-4567</p>
+            <h3>Email</h3>
+            <p>contact.forma@gmail.com</p>
+            <h3>Address</h3>
+            <p>National Highway, Los Baños, Laguna 4030</p>
+        </div>
+
+        <!--form section-->
+        <h3>Send us a message!</h3>
+        <div class="page-layout">
+        <form id="contact-form" class="contact-form" action="#" method="post"> 
+            <!-- id is for UNIQUE NAME para sa element action is where to send the form data method is for sending data to a server-->
+            <div class="form-group">
+            <label for="full-name">Full name <span class="required">(required)</span></label> <!-- label for para alam kung saan yung label and span is to markup a text -->
+            <input type="text" id="full-name" name="full_name" required autocomplete="name"> <!-- type for knowing what the element will be inputted by the user, name is for reference when data is submitted-->
+            </div> <!-- div is block type -->
+
+        <div class="form-group">
+          <label for="email">Email address <span class="required">(required)</span></label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message <span class="required">(required)</span></label>
+          <p id="message-hint" class="hint">Please do not include passwords or payment details.</p>
+          <textarea id="message" name="message" rows="6" required aria-describedby="message-hint"></textarea> 
+          <!-- text area means mas maraming space to enter text, aria-describedby provide more info by listing id description (used for plain text content)-->
+        </div>
+
+        <!--submit button-->
+        <button class="button" type="submit">Send message</button>
+        </form>
+        </div>
+
+        <!--map embed-->
+        </div class="map">
+            <h4>Our Location</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3868.3558737875996!2d121.26000877487643!3d14.173922586263675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd5e1e1875ade1%3A0x8582ac2ca372b951!2sUP%20Open%20University%20Headquarters!5e0!3m2!1sen!2sph!4v1794841744107!5m2!1sen!2sph" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+
+    </main>
+</body>
+</html>
