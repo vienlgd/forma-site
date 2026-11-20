@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- correct rendering of text -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- display in mobile device -->
+    <title>Forma | Home</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <meta name="description" content="Discover everyday essentials at Forma!">
+
+    <!-- Bootstrap 6.0.0-alpha.1 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+
+    <!-- Forma Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.bootstrap.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!--top navigation-->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar site-nav d-flex align-items-center justify-content-between flex-wrap" aria-label="main-nav">
+                <a href="home-bootstrap.html" class="navbar-brand nav-brand">
+                    <img src="assets/68fac.svg" alt="Forma Logo">
+                </a>
+
+                <ul class="nav-list d-none md:d-flex">
+                    <li><a href="home-bootstrap.html" class="nav-link active" aria-current="page">Home</a></li>
+                    <li><a href="shop-bootstrap.html" class="nav-link">Shop</a></li>
+                    <li><a href="about-bootstrap.html" class="nav-link">About</a></li>
+                </ul>
+
+                <div class="icon-nav d-flex align-items-center gap-3">
+                    <input type="text" placeholder="Search">
+                    <a href="signin-bootstrap.html" aria-label="Account"><img src="assets/3dddd.svg" alt="Account"></a>
+                    <a href="cart-bootstrap.html" aria-label="Cart"><img src="assets/b124b.svg" alt="Cart"></a>
+
+                    <button class="btn-icon navbar-toggler md:d-none" type="button"
+                        onclick="document.getElementById('mobileMenu').classList.toggle('d-none')"
+                        aria-controls="mobileMenu" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <div id="mobileMenu" class="w-100 mt-3 d-none md:d-none">
+                    <ul class="nav-list flex-column align-items-stretch gap-2">
+                        <li><a class="nav-link active w-100" aria-current="page" href="home-bootstrap.html">Home</a></li>
+                        <li><a class="nav-link w-100" href="shop-bootstrap.html">Shop</a></li>
+                        <li><a class="nav-link w-100" href="about-bootstrap.html">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow-1">
+
+        <!--header section-->
+        <section class="forma-tagline container py-7">
+            <div class="row align-items-center g-7">
+                <div class="tagline-text md:col-6">
+                    <h1 class="mb-4">Fit. Fresh.<br>Forma</h1>
+                    <a href="shop-bootstrap.html" class="button">Shop Now</a>
+                </div>
+                <div class="md:col-6 text-center">
+                    <img src="assets/home-main.png" alt="Forma Shirts" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <!--product features section-->
+        <section class="product-fabric-features container-fluid">
+            <div class="container">
+                <div class="row g-4 text-center">
+                    <div class="col-6 md:col-3">
+                        <img src="assets/breathable-icon.png" alt="Breathable">
+                        <h3>Breathable</h3>
+                        <p>Keep you cool, <br>all day long.</p>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <img src="assets/cotton-icon.png" alt="Cotton">
+                        <h3>Cotton</h3>
+                        <p>Gentle on your <br>skin, always.</p>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <img src="assets/fade-resistant-icon.png" alt="Fade-resistant">
+                        <h3>Fade-resistant</h3>
+                        <p>Made to last, for <br>your everyday.</p>
+                    </div>
+                    <div class="col-6 md:col-3">
+                        <img src="assets/eco-material-icon.png" alt="Eco Material">
+                        <h3>Eco Material</h3>
+                        <p>Sustainably made <br>for everyday wear.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!--collection section-->
+        <section class="featured-collection container py-7">
+            <div class="featured-inner mx-auto">
+                <div class="featured-text d-flex flex-wrap align-items-end justify-content-between gap-3 mb-5">
+                    <div>
+                        <h4>Featured Collection</h4>
+                        <h2>The Everyday Essentials</h2>
+                        <p class="mb-0">Lightweight. Breathable. Made for you.</p>
+                    </div>
+                    <a href="shop-bootstrap.html" class="search-button">
+                        <span>View All</span>
+                        <img src="assets/search.svg" alt="View All">
+                    </a>
+                </div>
+
+                <div class="row g-5 justify-content-center">
+                    <div class="col-12 sm:col-6 md:col-4">
+                        <div class="featured-item">
+                            <a href="shop-product3-bootstrap.html"><img src="assets/thumbnail3-blue.png" alt="Don't Be Late T-Shirt" class="img-fluid"></a>
+                            <div class="featured-card-body d-flex justify-content-between align-items-end">
+                                <div>
+                                    <h5>Don't Be Late T-Shirt</h5>
+                                    <p>₱ 259</p>
+                                </div>
+                                <button type="button" class="wishlist-button" aria-label="Add to wishlist">
+                                    <img src="assets/wishlist-white.png" alt="Wishlist">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 sm:col-6 md:col-4">
+                        <div class="featured-item">
+                            <a href="shop-product1-bootstrap.html"><img src="assets/thumbnail1-blue.png" alt="Everyday Comfort T-Shirt" class="img-fluid"></a>
+                            <div class="featured-card-body d-flex justify-content-between align-items-end">
+                                <div>
+                                    <h5>Everyday Comfort T-Shirt</h5>
+                                    <p>₱ 259</p>
+                                </div>
+                                <button type="button" class="wishlist-button" aria-label="Add to wishlist">
+                                    <img src="assets/wishlist-white.png" alt="Wishlist">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 sm:col-6 md:col-4">
+                        <div class="featured-item">
+                            <a href="shop-product2-bootstrap.html"><img src="assets/thumbnail2-blue.png" alt="Do Good Work T-Shirt" class="img-fluid"></a>
+                            <div class="featured-card-body d-flex justify-content-between align-items-end">
+                                <div>
+                                    <h5>Do Good Work T-Shirt</h5>
+                                    <p>₱ 259</p>
+                                </div>
+                                 <button type="button" class="wishlist-button round-circle" aria-label="Add to wishlist">
+                                    <img src="assets/wishlist-white.png" alt="Wishlist">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--last section CTA part-->
+       <!--last section-->
+        <section class="container py-7">
+            <div class="shop-call">
+                <div class="row align-items-center g-0">
+                    <div class="md:col-6 shop-call-text">
+                        <h2>Made for real life.</h2>
+                        <p class="mb-2">Breathable Essentials</p>
+                        <a href="shop-bootstrap.html" class="button">Shop Now</a>
+                    </div>
+
+                    <div class="md:col-6">
+                        <img src="assets/home-cta.png" alt="Made for real life" class="img-fluid shop-call-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!--footer-->
+    <footer class="site-footer mt-auto">
+        <div class="container footer-container">
+            <div class="footer-top row align-items-start g-4">
+                <div class="footer-brand md:col-4">
+                    <a href="home-bootstrap.html"><img src="assets/c5f08.svg" alt="Forma Wordmark"></a>
+                    <p class="copyright">Forma &middot; &copy; 2026</p>
+                </div>
+
+                <nav class="footer-nav md:col-5" aria-label="Footer Navigation">
+                    <h4 class="footer-nav-heading">Quick Links</h4>
+                    <div class="d-flex gap-5">
+                        <ul class="footer-links">
+                            <li><a href="home-bootstrap.html">Home</a></li>
+                            <li><a href="about-bootstrap.html">About</a></li>
+                            <li><a href="contact-us-bootstrap.html">Contact</a></li>
+                        </ul>
+                        <ul class="footer-links">
+                            <li><a href="shop-bootstrap.html">Shop</a></li>
+                            <li><a href="favorites-bootstrap.html">Favorites/Likes</a></li>
+                            <li><a href="cart-bootstrap.html">Cart</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="footer-socials md:col-3 d-flex gap-3 justify-content-md-end">
+                    <a href="https://facebook.com" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://instagram.com" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://tiktok.com" aria-label="TikTok"><ion-icon name="logo-tiktok"></ion-icon></a>
+                </div>
+            </div>
+
+            <ul class="footer-terms d-flex gap-3 list-unstyled mt-4">
+                <li><a href="privacypolicy-bootstrap.html">Privacy Policy</a></li>
+                <li><a href="privacypolicy-bootstrap.html">Terms &amp; Conditions</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 6 JavaScript (ESM Bundle) -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+
+    <!-- Ionicons for Social Media Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+ <!-- Forma Product Page Interactions -->
+    <script src="forma-product.js"></script>
+    <script src="home-wishlist.js"></script>
+
+    <!-- Header Tshirt Search Script -->
+    <script src="search-bar.js"></script>
+
+
+</body>
+</html>

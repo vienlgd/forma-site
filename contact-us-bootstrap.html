@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- correct rendering of text -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- display in mobile device -->
+    <title>Forma | Contact Us (Bootstrap 6)</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <meta name="description" content="Forma Sample Store">
+
+    <!-- Bootstrap 6.0.0-alpha.1 CSS (as what our module requires) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+
+    <!-- Forma Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.bootstrap.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!--top navigation-->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar site-nav d-flex align-items-center justify-content-between flex-wrap" aria-label="main-nav">
+                <!--logo image-->
+                <a href="home-bootstrap.html" class="navbar-brand nav-brand">
+                    <img src="assets/68fac.svg" alt="Forma Logo">
+                </a>
+
+                <!--main nav buttons (Desktop - none active since we are on Contact Us)-->
+                <ul class="nav-list d-none md:d-flex">
+                    <li><a href="home-bootstrap.html" class="nav-link">Home</a></li>
+                    <li><a href="shop-bootstrap.html" class="nav-link">Shop</a></li>
+                    <li><a href="about-bootstrap.html" class="nav-link">About</a></li>
+                </ul>
+
+                <!--icon nav + mobile toggle-->
+                <div class="icon-nav d-flex align-items-center gap-3">
+                    <input type="text" placeholder="Search">
+                    <a href="signin-bootstrap.html" aria-label="Account"><img src="assets/3dddd.svg" alt="Account"></a>
+                    <a href="cart-bootstrap.html" aria-label="Cart"><img src="assets/b124b.svg" alt="Cart"></a>
+
+                    <!-- Mobile Menu Toggle Button (Hidden on desktop via md:d-none) -->
+                    <button class="btn-icon navbar-toggler md:d-none" type="button"
+                        onclick="document.getElementById('mobileMenu').classList.toggle('d-none')"
+                        aria-controls="mobileMenu" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- Mobile Dropdown Menu (Hidden until clicked, and never shown on desktop) -->
+                <div id="mobileMenu" class="w-100 mt-3 d-none md:d-none">
+                    <ul class="nav-list flex-column align-items-stretch gap-2">
+                        <li><a class="nav-link w-100" href="home-bootstrap.html">Home</a></li>
+                        <li><a class="nav-link w-100" href="shop-bootstrap.html">Shop</a></li>
+                        <li><a class="nav-link w-100" href="about-bootstrap.html">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-main py-12 flex-grow-1">
+
+        <!-- ===== TOP SECTION: Contact Details (left) + Form (right) ===== -->
+        <div class="container">
+            <div class="row g-7 align-items-start">
+
+                <!-- LEFT: Contact Details -->
+                <div class="contact-info md:col-6">
+                    <div class="contact-intro">
+                        <h1 class="contact-title">Contact Us!</h1>
+                        <p class="contact-subtitle">Do you have any questions? We'd love to hear from you.<br>Find our contact details below:</p>
+                    </div>
+
+                    <div class="contact-items-list">
+                        <!-- Phone -->
+                        <div class="contact-item">
+                            <img src="assets/phone-orange.png" alt="Phone icon" class="contact-icon">
+                            <div class="contact-text">
+                                <p class="contact-label">Phone</p>
+                                <p class="contact-value">+63 912 345 6789 or (49) 123 4567</p>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="contact-item">
+                            <img src="assets/email-orange.png" alt="Email icon" class="contact-icon">
+                            <div class="contact-text">
+                                <p class="contact-label">Email</p>
+                                <a href="mailto:contact.forma@gmail.com" class="contact-value contact-link">contact.forma@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="contact-item">
+                            <img src="assets/location-orange.png" alt="Address icon" class="contact-icon">
+                            <div class="contact-text">
+                                <p class="contact-label">Address</p>
+                                <p class="contact-value">Brgy. Maahas, National Highway,<br>Los Ba&ntilde;os, Laguna 4030</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Send us a message form (blue card) -->
+                <div class="contact-form-card md:col-6">
+                    <h2 class="form-card-title">Send us a message!</h2>
+
+                    <form id="contact-form" action="#" method="post">
+                        <div class="form-field mb-5">
+                             <label for="full-name">Name <span class="required">*</span></label>
+                             <input type="text" id="full-name" name="name" placeholder="ex. Juan Dela Cruz" required autocomplete="name">
+                        </div>
+
+                        <div class="form-field mb-5">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="JuanDelaCruz@gmail.com" required autocomplete="email">
+                        </div>
+
+                        <div class="form-field mb-5">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+                        </div>
+
+                        <button class="contact-submit" type="submit">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== BOTTOM SECTION: Our Location map (green card) ===== -->
+        <div class="location-section container mt-12">
+            <h3 class="location-title">Our Location</h3>
+            <div class="map-wrapper">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3868.3558737875996!2d121.26000877487643!3d14.173922586263675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd5e1e1875ade1%3A0x8582ac2ca372b951!2sUP%20Open%20University%20Headquarters!5e0!3m2!1sen!2sph!4v1794841744107!5m2!1sen!2sph"
+                    allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+            </div>
+        </div>
+
+    </main>
+
+    <!--footer-->
+    <footer class="site-footer mt-auto">
+        <div class="container footer-container">
+            <div class="footer-top row align-items-start g-4">
+                <div class="footer-brand md:col-4">
+                    <a href="home-bootstrap.html"><img src="assets/c5f08.svg" alt="Forma Wordmark"></a>
+                    <p class="copyright">Forma &middot; &copy; 2026</p>
+                </div>
+
+                <nav class="footer-nav md:col-5" aria-label="Footer Navigation">
+                    <h4 class="footer-nav-heading">Quick Links</h4>
+                    <div class="d-flex gap-5">
+                        <ul class="footer-links">
+                            <li><a href="home-bootstrap.html">Home</a></li>
+                            <li><a href="about-bootstrap.html">About</a></li>
+                            <li><a href="contact-us-bootstrap.html">Contact</a></li>
+                        </ul>
+                        <ul class="footer-links">
+                            <li><a href="shop-bootstrap.html">Shop</a></li>
+                            <li><a href="favorites-bootstrap.html">Favorites/Likes</a></li>
+                            <li><a href="cart-bootstrap.html">Cart</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="footer-socials md:col-3 d-flex gap-3 justify-content-md-end">
+                    <a href="https://facebook.com" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://instagram.com" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://tiktok.com" aria-label="TikTok"><ion-icon name="logo-tiktok"></ion-icon></a>
+                </div>
+            </div>
+
+            <ul class="footer-terms d-flex gap-3 list-unstyled mt-4">
+                <li><a href="privacypolicy-bootstrap.html">Privacy Policy</a></li>
+                <li><a href="privacypolicy-bootstrap.html">Terms &amp; Conditions</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 6 JavaScript (ESM-only bundle) -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+
+    <!-- Ionicons for Social Media Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+
+    <!-- Contact Form Mailto Script -->
+    <script src="forma-mailto.js"></script>
+
+    <!-- Header Tshirt Search Script -->
+    <script src="search-bar.js"></script>
+
+    <script src="forma-product.js"></script>
+
+</body>
+</html>
